@@ -7,7 +7,7 @@ import { GithubIcon, LinkedinIcon } from '../ui/BrandIcons'
  * Fixed desktop left sidebar with monogram, wordmark, active section indicator,
  * verified social links, and status badge.
  */
-export function Sidebar({ activeSection }) {
+export function Sidebar({ activeSection, onOpenResume }) {
   return (
     <aside
       aria-label="Primary Sidebar Navigation"
@@ -25,7 +25,7 @@ export function Sidebar({ activeSection }) {
               <img
                 src={profile.avatar}
                 alt={profile.avatarAlt || profile.name}
-                className="h-full w-full object-cover object-top grayscale contrast-110 transition-all duration-300 group-hover:grayscale-0"
+                className="h-full w-full object-cover object-top"
               />
             </span>
           ) : (
@@ -125,18 +125,17 @@ export function Sidebar({ activeSection }) {
         {/* Verified Social & Contact Links */}
         <div className="space-y-2">
           {profile.resumeUrl && (
-            <a
-              href={profile.resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between text-xs font-mono text-neutral-600 hover:text-neutral-950 py-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950"
+            <button
+              type="button"
+              onClick={onOpenResume}
+              className="w-full flex items-center justify-between text-xs font-mono text-neutral-600 hover:text-neutral-950 py-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 cursor-pointer"
             >
               <span className="inline-flex items-center gap-2">
                 <FileText className="h-3.5 w-3.5" aria-hidden="true" />
                 <span>Resume / CV</span>
               </span>
               <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
-            </a>
+            </button>
           )}
           {profile.socials?.github && (
             <a

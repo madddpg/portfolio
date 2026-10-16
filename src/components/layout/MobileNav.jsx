@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
-import { ArrowUpRight, Mail, Menu, X } from 'lucide-react'
+import { ArrowUpRight, FileText, Mail, Menu, X } from 'lucide-react'
 import { profile } from '../../data/profile'
 import { cn } from '../../lib/utils'
 import { GithubIcon, LinkedinIcon } from '../ui/BrandIcons'
@@ -8,7 +8,7 @@ import { GithubIcon, LinkedinIcon } from '../ui/BrandIcons'
 /**
  * Accessible mobile and tablet navigation header with slide-down drawer.
  */
-export function MobileNav({ activeSection }) {
+export function MobileNav({ activeSection, onOpenResume }) {
   const [isOpen, setIsOpen] = useState(false)
   const prefersReducedMotion = useReducedMotion()
 
@@ -39,7 +39,7 @@ export function MobileNav({ activeSection }) {
               <img
                 src={profile.avatar}
                 alt={profile.avatarAlt || profile.name}
-                className="h-full w-full object-cover object-top grayscale contrast-110"
+                className="h-full w-full object-cover object-top"
               />
             </span>
           ) : (
@@ -119,6 +119,20 @@ export function MobileNav({ activeSection }) {
             </ul>
 
             <div className="mt-5 pt-4 border-t border-neutral-200 flex flex-wrap items-center justify-between gap-4">
+              {profile.resumeUrl && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsOpen(false)
+                    onOpenResume?.()
+                  }}
+                  className="inline-flex items-center gap-1.5 font-mono text-xs text-neutral-700 hover:text-neutral-950 cursor-pointer"
+                >
+                  <FileText className="h-3.5 w-3.5" aria-hidden="true" />
+                  <span>Resume / CV</span>
+                </button>
+              )}
+
               {profile.socials?.github && (
                 <a
                   href={profile.socials.github}

@@ -14,7 +14,7 @@ import { GithubIcon, LinkedinIcon } from '../components/ui/BrandIcons'
  * Hero section with editorial typography, CSS dotted background pattern,
  * primary/secondary CTAs, and technology focus summary.
  */
-export function Hero() {
+export function Hero({ onOpenResume }) {
   const prefersReducedMotion = useReducedMotion()
 
   const containerVariants = {
@@ -54,8 +54,8 @@ export function Hero() {
         initial="hidden"
         animate="visible"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center mb-14 sm:mb-16">
-          <div className="lg:col-span-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center mb-14 sm:mb-16">
+          <div className="lg:col-span-8 order-2 lg:order-1">
             {/* Top Eyebrow / Introduction */}
             <motion.div
               variants={itemVariants}
@@ -105,8 +105,8 @@ export function Hero() {
 
               {profile.resumeUrl && (
                 <Button
-                  href={profile.resumeUrl}
-                  external
+                  type="button"
+                  onClick={onOpenResume}
                   variant="secondary"
                   size="lg"
                 >
@@ -153,14 +153,14 @@ export function Hero() {
           {profile.avatar && (
             <motion.div
               variants={itemVariants}
-              className="lg:col-span-4 flex justify-start lg:justify-end"
+              className="lg:col-span-4 order-1 lg:order-2 flex justify-start lg:justify-end"
             >
-              <figure className="group relative w-64 sm:w-72 lg:w-full max-w-xs border border-neutral-950 bg-white p-2.5 shadow-[6px_6px_0px_0px_rgba(10,10,10,1)]">
+              <figure className="group relative w-48 sm:w-64 lg:w-full max-w-xs border border-neutral-950 bg-white p-2.5 shadow-[6px_6px_0px_0px_rgba(10,10,10,1)]">
                 <div className="relative aspect-square overflow-hidden border border-neutral-200 bg-neutral-100">
                   <img
                     src={profile.avatar}
                     alt={profile.avatarAlt || profile.name}
-                    className="h-full w-full object-cover object-top grayscale contrast-110 transition-all duration-500 ease-out group-hover:grayscale-0 group-hover:scale-[1.02]"
+                    className="h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                   />
                 </div>
                 <figcaption className="pt-2.5 px-1 flex items-center justify-between font-mono text-[11px] text-neutral-600">

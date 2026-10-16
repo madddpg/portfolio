@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Sidebar } from './components/layout/Sidebar'
 import { MobileNav } from './components/layout/MobileNav'
 import { Footer } from './components/layout/Footer'
+import { ResumeModal } from './components/ui/ResumeModal'
 import { Hero } from './sections/Hero'
 import { About } from './sections/About'
 import { Projects } from './sections/Projects'
@@ -13,6 +14,7 @@ import { profile } from './data/profile'
 
 export function App() {
   const [activeSection, setActiveSection] = useState('about')
+  const [isResumeOpen, setIsResumeOpen] = useState(false)
 
   useEffect(() => {
     const sectionIds = profile.navigation.map((item) => item.id)
@@ -42,6 +44,9 @@ export function App() {
     return () => observer.disconnect()
   }, [])
 
+  const openResume = () => setIsResumeOpen(true)
+  const closeResume = () => setIsResumeOpen(false)
+
   return (
     <div className="min-h-screen bg-white text-neutral-950 flex flex-col">
       {/* Keyboard Accessibility Skip Link */}
@@ -53,24 +58,27 @@ export function App() {
       </a>
 
       {/* Fixed Desktop Sidebar */}
-      <Sidebar activeSection={activeSection} />
+      <Sidebar activeSection={activeSection} onOpenResume={openResume} />
 
       {/* Mobile & Tablet Sticky Header */}
-      <MobileNav activeSection={activeSection} />
+      <MobileNav activeSection={activeSection} onOpenResume={openResume} />
 
       {/* Main Content Area offset by Desktop Sidebar */}
       <div className="lg:pl-72 xl:pl-80 flex-1 flex flex-col min-w-0">
         <main id="main-content" className="flex-1">
-          <Hero />
+          <Hero onOpenResume={openResume} />
           <About />
           <Projects />
           <Skills />
-          <Certifications />
+          <Certifications onOpenResume={openResume} />
           <Experience />
           <Contact />
         </main>
         <Footer />
       </div>
+
+      {/* Interactive Resume / CV Modal */}
+      <ResumeModal isOpen={isResumeOpen} onClose={closeResume} />
     </div>
   )
 }

@@ -8,7 +8,7 @@ import { Reveal } from '../components/ui/Reveal'
  * Certifications section displaying verified Certiport / Pearson VUE credentials
  * with local badge images and direct Credly verification links.
  */
-export function Certifications() {
+export function Certifications({ onOpenResume }) {
   return (
     <section
       id="certifications"
@@ -123,16 +123,25 @@ export function Certifications() {
                 </p>
               </div>
 
-              <a
-                href={profile.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 font-mono text-xs font-medium px-4 py-2.5 bg-white text-neutral-950 border border-neutral-300 hover:border-neutral-950 transition-colors shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950"
-              >
-                <FileText className="h-4 w-4" aria-hidden="true" />
-                <span>Open Resume PDF</span>
-                <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
-              </a>
+              <div className="flex flex-wrap items-center gap-2.5 shrink-0">
+                <button
+                  type="button"
+                  onClick={onOpenResume}
+                  className="inline-flex items-center justify-center gap-2 font-mono text-xs font-medium px-4 py-2.5 bg-neutral-950 text-white border border-neutral-950 hover:bg-neutral-800 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950"
+                >
+                  <FileText className="h-4 w-4" aria-hidden="true" />
+                  <span>View Resume</span>
+                </button>
+
+                <a
+                  href={profile.resumeUrl}
+                  download={profile.resumeFileName || 'Paguta_Ahmad_D_CV2026.pdf'}
+                  className="inline-flex items-center justify-center gap-2 font-mono text-xs font-medium px-4 py-2.5 bg-white text-neutral-950 border border-neutral-300 hover:border-neutral-950 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950"
+                >
+                  <span>Download PDF</span>
+                  <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                </a>
+              </div>
             </div>
           </Reveal>
         )}
