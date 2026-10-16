@@ -107,9 +107,20 @@ export function ResumeModal({ isOpen, onClose }) {
               </div>
             </div>
 
-            {/* Scrollable Formatted CV Document */}
-            <div className="overflow-y-auto p-6 sm:p-10 md:p-12 bg-neutral-100">
-              <div className="max-w-3xl mx-auto bg-white border border-neutral-300 shadow-sm p-6 sm:p-10 text-neutral-950 font-serif">
+            {/* Scrollable CV Document (Embedded PDF + Formatted View) */}
+            <div className="overflow-y-auto flex-1 bg-neutral-100">
+              {/* Embedded Native PDF Viewer */}
+              <div className="hidden sm:block w-full h-[78vh] bg-neutral-800 border-b border-neutral-300">
+                <iframe
+                  src={profile.resumeUrl}
+                  title="Ahmad D. Paguta CV 2026 PDF"
+                  className="w-full h-full border-0"
+                />
+              </div>
+
+              {/* Mobile & Accessible HTML Fallback View */}
+              <div className="sm:hidden p-4 bg-neutral-100">
+                <div className="max-w-3xl mx-auto bg-white border border-neutral-300 shadow-sm p-5 text-neutral-950 font-serif">
                 {/* CV Header */}
                 <header className="text-center border-b border-neutral-300 pb-5 mb-6">
                   <h2 className="text-2xl sm:text-3xl font-bold tracking-wide uppercase text-neutral-950">
@@ -317,6 +328,7 @@ export function ResumeModal({ isOpen, onClose }) {
                     </div>
                   </div>
                 </section>
+                </div>
               </div>
             </div>
           </motion.div>

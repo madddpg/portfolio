@@ -1,5 +1,4 @@
 import profileImg from '../assets/profile.png'
-import resumePdf from '../assets/Paguta_Ahmad_D_CV2026.pdf'
 
 /**
  * Centralized profile and personal metadata.
@@ -13,7 +12,7 @@ export const profile = {
   avatar: profileImg,
   avatarAlt: 'Portrait of Ahmad Paguta',
   role: 'Backend & Application Developer',
-  resumeUrl: resumePdf,
+  resumeUrl: `${import.meta.env.BASE_URL}Paguta_Ahmad_D_CV2026.pdf`,
   resumeFileName: 'Paguta_Ahmad_D_CV2026.pdf',
   headline:
     'Building reliable backend architectures, database workflows, and connected web & mobile applications.',
