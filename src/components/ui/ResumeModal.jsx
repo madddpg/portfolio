@@ -150,12 +150,12 @@ export function ResumeModal({ isOpen, onClose }) {
                     </a>{' '}
                     |{' '}
                     <a
-                      href={profile.socials.linkedin}
+                      href="https://madddpg.github.io/portfolio/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="underline hover:text-neutral-950"
                     >
-                      {profile.socials.linkedinLabel}
+                      https://madddpg.github.io/portfolio/
                     </a>
                   </p>
                 </header>
