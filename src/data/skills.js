@@ -1,6 +1,6 @@
 /**
  * Centralized skills and technology stack grouped by functional category.
- * Reflects verified tools used across iConstruct, NUTrade, Cups & Cuddles, and web projects.
+ * Reflects verified tools from Ahmad D. Paguta's 2026 CV and software projects.
  */
 export const skillCategories = [
   {
@@ -10,10 +10,10 @@ export const skillCategories = [
     description:
       'Core languages used for server-side logic, database querying, client interactivity, and cross-platform mobile development.',
     items: [
-      { name: 'PHP', context: 'Server-side web controllers & session workflows' },
-      { name: 'JavaScript', context: 'ES6+, asynchronous client & server scripting' },
-      { name: 'TypeScript', context: 'Typed Cloud Functions & API payloads' },
-      { name: 'C#', context: '.NET MAUI mobile application logic' },
+      { name: 'JavaScript & TypeScript', context: 'ES6+, Node.js & typed Cloud Functions' },
+      { name: 'PHP', context: 'Server-side web controllers & Laravel backend' },
+      { name: 'Java & C#', context: 'Object-oriented programming & .NET MAUI apps' },
+      { name: 'Dart', context: 'Flutter cross-platform application logic' },
       { name: 'SQL', context: 'Relational schema design & queries (MySQL)' },
       { name: 'HTML5 & CSS3', context: 'Semantic markup & responsive layout systems' },
     ],
@@ -21,44 +21,42 @@ export const skillCategories = [
   {
     id: 'backend-services',
     index: '02',
-    title: 'Backend & Services',
+    title: 'Backend, Databases & Cloud',
     description:
       'Serverless functions, relational and NoSQL databases, authentication pipelines, and third-party API integrations.',
     items: [
-      { name: 'Node.js', context: 'Backend runtime for serverless functions' },
-      { name: 'MySQL', context: 'Relational database management for web apps' },
+      { name: 'Node.js & Laravel', context: 'Backend runtimes & web application frameworks' },
       { name: 'Firebase Cloud Functions', context: 'Event-driven backend logic & webhooks' },
-      { name: 'Cloud Firestore', context: 'NoSQL document modeling & real-time sync' },
-      { name: 'Firebase Authentication', context: 'Role-based & domain-restricted auth' },
-      { name: 'Firebase Cloud Messaging', context: 'Push notification delivery pipelines' },
-      { name: 'PHPMailer', context: 'Transactional SMTP & Email OTP verification' },
-      { name: 'REST API & AJAX Integration', context: 'PayMongo API, Gemini API & async HTTP' },
+      { name: 'MySQL', context: 'Relational database management for web apps' },
+      { name: 'Firebase & Cloud Firestore', context: 'NoSQL document modeling, Auth & FCM' },
+      { name: 'Supabase', context: 'Backend-as-a-Service & Postgres workflows' },
+      { name: 'REST APIs, Webhooks & AJAX', context: 'PayMongo QR Ph API, Gemini API & PHPMailer' },
     ],
   },
   {
     id: 'application-development',
     index: '03',
-    title: 'Application Development',
+    title: 'Frontend & Application Development',
     description:
       'Frameworks and toolkits used to build responsive web interfaces and cross-platform mobile applications.',
     items: [
       { name: 'React', context: 'Component-based web interfaces & Vite apps' },
-      { name: 'Flutter', context: 'Cross-platform mobile client integration' },
+      { name: 'Flutter', context: 'Cross-platform mobile & web client development' },
       { name: '.NET MAUI', context: 'Multi-platform mobile apps with C# & XAML' },
-      { name: 'Tailwind CSS', context: 'Utility-first styling & responsive design' },
+      { name: 'Tailwind CSS & Bootstrap', context: 'Utility-first & responsive UI styling' },
     ],
   },
   {
     id: 'tools-workflow',
     index: '04',
-    title: 'Tools & Workflow',
+    title: 'Developer Tools, DevOps & Design',
     description:
-      'Development environments, version control, and build tooling used in daily software engineering.',
+      'Development environments, version control, deployment pipelines, and prototyping tools.',
     items: [
-      { name: 'Git & GitHub', context: 'Version control & collaborative repositories' },
-      { name: 'Visual Studio Code', context: 'Web, Node.js, PHP & Flutter development' },
-      { name: 'Visual Studio', context: '.NET MAUI & C# mobile debugging' },
-      { name: 'Vite', context: 'Frontend build tooling & development server' },
+      { name: 'Git, GitHub & GitHub Actions', context: 'Version control & CI/CD workflows' },
+      { name: 'VS Code, Visual Studio, Cursor & Antigravity', context: 'IDEs & AI-assisted engineering environments' },
+      { name: 'Postman, Vercel & Firebase Hosting', context: 'API testing & cloud web deployment' },
+      { name: 'Figma & Canva', context: 'UI wireframing & visual prototyping' },
     ],
   },
 ]

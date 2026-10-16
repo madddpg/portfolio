@@ -68,16 +68,12 @@ export function Hero() {
               <span className="font-mono text-xs font-medium text-neutral-900">
                 Hello, I&apos;m {profile.name}
               </span>
-              {profile.status?.label && (
-                <>
-                  <span className="text-neutral-300" aria-hidden="true">
-                    /
-                  </span>
-                  <span className="font-mono text-xs text-neutral-600">
-                    {profile.status.label}
-                  </span>
-                </>
-              )}
+              <span className="text-neutral-300" aria-hidden="true">
+                /
+              </span>
+              <span className="font-mono text-xs text-neutral-600">
+                {profile.role}
+              </span>
             </motion.div>
 
             {/* Main Display Heading */}

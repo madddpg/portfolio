@@ -6,22 +6,25 @@ import profileImg from '../assets/profile.png'
  */
 export const profile = {
   name: 'Ahmad Paguta',
+  fullName: 'Ahmad D. Paguta',
   initials: 'AP',
   handle: 'madddpg',
   avatar: profileImg,
   avatarAlt: 'Portrait of Ahmad Paguta',
-  role: '',
-  // Place your resume PDF in the `public/` folder as `public/resume.pdf` (or update the path/URL here)
+  role: 'Backend & Application Developer',
   resumeUrl: '/resume.pdf',
   headline:
     'Building reliable backend architectures, database workflows, and connected web & mobile applications.',
   shortBio:
-    'Information Technology student and software developer focused on backend systems, relational and NoSQL data modeling, API integrations, and cross-platform application development.',
+    'Information Technology student (Specialization in Mobile and Web Applications, Expected 2027) and software developer focused on backend systems, relational and NoSQL data modeling, API integrations, and cross-platform applications.',
   location: 'Lipa City, Batangas, Philippines',
+  phone: '+63 939 754 1439',
   institution: 'National University — Lipa',
+  degree:
+    'BS in Information Technology — Specialization in Mobile and Web Applications (Expected 2027)',
   status: {
     available: true,
-    label: 'Looking for Internship',
+    label: 'Open to internships & project collaborations',
   },
   email: 'pagutaad@gmail.com',
   socials: {
@@ -32,16 +35,16 @@ export const profile = {
   },
   heroTechSummary: [
     'Node.js & Cloud Functions',
-    'PHP & MySQL',
-    'Firebase & Firestore',
+    'PHP, Laravel & MySQL',
+    'Firebase & Supabase',
     'Flutter & .NET MAUI',
-    'REST APIs',
+    'React & Tailwind CSS',
   ],
   about: {
-    lead: 'I am an Information Technology student and software developer who builds practical web and mobile applications—with a primary focus on how data, backend logic, and external services work together behind the scenes.',
+    lead: 'I am an Information Technology student specializing in Mobile and Web Applications at National University Lipa, focused on how data, backend logic, and external services work together behind the scenes.',
     paragraphs: [
       'Across academic and project-based software builds, my work centers on designing database schemas, writing server-side functions, integrating third-party APIs, and connecting client interfaces to dependable backend workflows.',
-      'Whether implementing serverless Cloud Functions and AI-assisted material estimation for a mobile renovation platform, integrating payment and messaging workflows in a .NET MAUI student marketplace, or building a PHP and MySQL ordering system with AJAX and PHPMailer, I focus on writing clean, traceable code that solves concrete problems.',
+      'Whether implementing serverless Cloud Functions and AI-assisted material estimation for iConstruct, engineering an automated PayMongo QR Ph webhook pipeline for NUTrade in .NET MAUI, or building a PHP and MySQL ordering system with AJAX and PHPMailer for Cups & Cuddles, I focus on writing clean, traceable code that solves concrete problems.',
     ],
     principles: [
       {
@@ -78,6 +81,7 @@ export const profile = {
     { id: 'about', label: 'About', href: '#about' },
     { id: 'projects', label: 'Projects', href: '#projects' },
     { id: 'skills', label: 'Skills', href: '#skills' },
+    { id: 'certifications', label: 'Certifications', href: '#certifications' },
     { id: 'experience', label: 'Experience', href: '#experience' },
     { id: 'contact', label: 'Contact', href: '#contact' },
   ],

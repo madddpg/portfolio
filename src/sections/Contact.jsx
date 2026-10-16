@@ -46,10 +46,10 @@ export function Contact() {
       <div className="max-w-5xl mx-auto">
         <div id="contact-heading">
           <SectionHeading
-            index="05"
+            index="06"
             label="Contact"
             title="Let&apos;s discuss backend systems, internships, or project collaborations."
-            description="Reach out directly via email or connect on GitHub. No third-party tracking or simulated form queues."
+            description="Reach out directly via email or connect on GitHub and LinkedIn. No third-party tracking or simulated form queues."
             dark
           />
         </div>

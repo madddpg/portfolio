@@ -6,6 +6,7 @@ import { Hero } from './sections/Hero'
 import { About } from './sections/About'
 import { Projects } from './sections/Projects'
 import { Skills } from './sections/Skills'
+import { Certifications } from './sections/Certifications'
 import { Experience } from './sections/Experience'
 import { Contact } from './sections/Contact'
 import { profile } from './data/profile'
@@ -64,6 +65,7 @@ export function App() {
           <About />
           <Projects />
           <Skills />
+          <Certifications />
           <Experience />
           <Contact />
         </main>

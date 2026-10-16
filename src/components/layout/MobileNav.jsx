@@ -56,6 +56,9 @@ export function MobileNav({ activeSection }) {
                 {profile.initials}
               </span>
             </div>
+            <span className="block font-mono text-[10px] text-neutral-500 mt-0.5">
+              {profile.role}
+            </span>
           </div>
         </a>
 

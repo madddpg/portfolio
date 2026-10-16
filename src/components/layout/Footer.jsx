@@ -15,6 +15,8 @@ export function Footer() {
           <span className="font-mono text-neutral-900 font-medium">
             © {CURRENT_YEAR} {profile.name}
           </span>
+          <span aria-hidden="true">·</span>
+          <span>{profile.role}</span>
         </div>
 
         <a

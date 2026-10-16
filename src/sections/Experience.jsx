@@ -17,7 +17,7 @@ export function Experience() {
       <div className="max-w-5xl mx-auto">
         <div id="experience-heading">
           <SectionHeading
-            index="04"
+            index="05"
             label="Development Journey"
             title="Academic &amp; Project-Based Experience"
             description="Hands-on engineering roles across software projects—focused on backend architecture, database implementation, API integrations, and system reliability."
