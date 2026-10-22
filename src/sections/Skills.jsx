@@ -2,6 +2,7 @@ import { Code, Database, Smartphone, Wrench } from 'lucide-react'
 import { skillCategories } from '../data/skills'
 import { SectionHeading } from '../components/ui/SectionHeading'
 import { Reveal } from '../components/ui/Reveal'
+import { TechIcon } from '../components/ui/TechIcon'
 
 const categoryIcons = {
   languages: Code,
@@ -64,10 +65,19 @@ export function Skills() {
                       {category.items.map((item) => (
                         <li
                           key={item.name}
-                          className="py-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-1"
+                          className="group py-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-1"
                         >
-                          <span className="font-mono text-xs sm:text-sm font-semibold text-neutral-900">
-                            {item.name}
+                          <span className="flex items-center gap-2.5">
+                            {item.icons?.length > 0 && (
+                              <span className="flex shrink-0 items-center gap-1.5">
+                                {item.icons.map((icon) => (
+                                  <TechIcon key={icon} name={icon} className="h-4 w-4" />
+                                ))}
+                              </span>
+                            )}
+                            <span className="font-mono text-xs sm:text-sm font-semibold text-neutral-900">
+                              {item.name}
+                            </span>
                           </span>
                           <span className="text-xs text-neutral-500">
                             {item.context}

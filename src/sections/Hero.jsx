@@ -5,6 +5,7 @@ import {
   FileText,
   Mail,
   Terminal,
+  Workflow,
 } from 'lucide-react'
 import { profile } from '../data/profile'
 import { Button } from '../components/ui/Button'
@@ -88,10 +89,31 @@ export function Hero({ onOpenResume }) {
             {/* Concise Approach Description */}
             <motion.p
               variants={itemVariants}
-              className="text-base sm:text-lg text-neutral-600 leading-relaxed max-w-2xl mb-9"
+              className="text-base sm:text-lg text-neutral-600 leading-relaxed max-w-2xl mb-5"
             >
               {profile.shortBio}
             </motion.p>
+
+            {/* Highlighted Focus Tag */}
+            {profile.focusTag && (
+              <motion.div
+                variants={itemVariants}
+                className="inline-flex flex-wrap items-center gap-2.5 border border-neutral-950 bg-white py-1.5 pl-1.5 pr-3 mb-9 shadow-[3px_3px_0px_0px_rgba(10,10,10,1)]"
+              >
+                <span className="inline-flex h-6 w-6 items-center justify-center bg-neutral-950 text-white">
+                  <Workflow className="h-3.5 w-3.5" aria-hidden="true" />
+                </span>
+                <span className="font-mono text-[11px] uppercase tracking-widest text-neutral-500">
+                  {profile.focusTag.label}
+                </span>
+                <span className="hidden sm:inline text-neutral-300" aria-hidden="true">
+                  /
+                </span>
+                <span className="text-sm font-semibold text-neutral-950">
+                  {profile.focusTag.value}
+                </span>
+              </motion.div>
+            )}
 
             {/* Primary, Secondary, Resume & Social Action Buttons */}
             <motion.div

@@ -18,6 +18,10 @@ export const profile = {
     'Building reliable backend architectures, database workflows, and connected web & mobile applications.',
   shortBio:
     'Information Technology student (Specialization in Mobile and Web Applications, Expected 2027) and software developer focused on backend systems, relational and NoSQL data modeling, API integrations, and cross-platform applications.',
+  focusTag: {
+    label: 'Also building',
+    value: 'AI Automation & Workflow Development',
+  },
   location: 'Lipa City, Batangas, Philippines',
   phone: '+63 939 754 1439',
   institution: 'National University — Lipa',
